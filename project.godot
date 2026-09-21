@@ -11,12 +11,22 @@ config_version=5
 [application]
 
 config/name="Climax JUMPING! Palantir!"
+run/main_scene="res://examples/scenes/opening/opening.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="uid://daod1nquapyu3"
 
+[clean_copy_examples]
+
+examples_paths=Array[String](["res://addons/maaacks_game_template/examples/"])
+copy_path="res://examples/"
+
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg", "res://addons/maaacks_game_template/plugin.cfg")
+
+[gui]
+
+theme/custom="res://examples/resources/themes/gravity.tres"
 
 [input]
 
@@ -36,9 +46,27 @@ jump={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://addons/maaacks_game_template/base/translations/menus_translations.en.translation", "res://addons/maaacks_game_template/base/translations/menus_translations.fr.translation")
+
+[maaacks_game_template]
+
+disable_install_wizard=true
+main_menu_scene_path="res://examples/scenes/menus/main_menu/main_menu.tscn"
+game_scene_path="res://examples/scenes/game/game.tscn"
+ending_scene_path="res://examples/scenes/end_credits/end_credits.tscn"
+copy_path="res://examples/"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
+
+[plugin_updater]
+
+plugins={
+"res://addons/maaacks_game_template/": "https://github.com/Maaack/Godot-Minimal-Game-Template"
+}
 
 [rendering]
 
