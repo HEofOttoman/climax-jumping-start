@@ -13,7 +13,7 @@ config_version=5
 config/name="Climax JUMPING! Palantir!"
 run/main_scene="res://examples/scenes/opening/opening.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="uid://daod1nquapyu3"
+config/icon="uid://q70h0y0sy14k"
 
 [clean_copy_examples]
 
