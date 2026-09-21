@@ -1,18 +1,22 @@
 [gd_scene format=3 uid="uid://bmk57lsjrhq4p"]
 
-[ext_resource type="PackedScene" path="res://examples/scenes/credits/scrolling_credits.tscn" id="1_fofem"]
-[ext_resource type="Script" path="res://examples/scenes/end_credits/end_credits.gd" id="2_v3xly"]
-[ext_resource type="Script" path="res://addons/maaacks_game_template/base/nodes/utilities/capture_focus.gd" id="3_53wi1"]
+[ext_resource type="PackedScene" uid="uid://c2a42nq2ad1dl" path="res://examples/scenes/credits/scrolling_credits.tscn" id="1_fofem"]
+[ext_resource type="Script" uid="uid://dietadmleiqi7" path="res://examples/scenes/end_credits/end_credits.gd" id="2_v3xly"]
+[ext_resource type="Script" uid="uid://1nf36h0gms3q" path="res://addons/maaacks_game_template/base/nodes/utilities/capture_focus.gd" id="3_53wi1"]
+[ext_resource type="AudioStream" uid="uid://4juc5fs561bt" path="res://HIGHEST JUMPING.mp3" id="3_kwcwf"]
+[ext_resource type="Texture2D" uid="uid://d2u841yn141vp" path="res://credit.png" id="3_v3xly"]
 
 [node name="EndCredits" unique_id=241213605 instance=ExtResource("1_fofem")]
 script = ExtResource("2_v3xly")
 main_menu_scene_path = ""
 force_mouse_mode_visible = false
+scroll_paused = true
 
 [node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="." index="0" unique_id=1411252862]
 process_mode = 3
+stream = ExtResource("3_kwcwf")
+volume_db = -5.0
 autoplay = true
-bus = &"Music"
 
 [node name="BackgroundColor" type="ColorRect" parent="." index="1" unique_id=1680337145]
 layout_mode = 1
@@ -30,10 +34,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("3_v3xly")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CenterContainer" type="CenterContainer" parent="." index="5" unique_id=1516904581]
+[node name="ScrollContainer" parent="." index="3" unique_id=1826061058]
+scroll_vertical = 1775
+
+[node name="HeaderSpace" parent="ScrollContainer/VBoxContainer" parent_id_path=PackedInt32Array(1799859771) index="0" unique_id=1055754816]
+custom_minimum_size = Vector2(0, 648)
+
+[node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" parent_id_path=PackedInt32Array(1799859771) index="1" unique_id=951333631]
+custom_minimum_size = Vector2(1152, 0)
+
+[node name="FooterSpace" parent="ScrollContainer/VBoxContainer" parent_id_path=PackedInt32Array(1799859771) index="2" unique_id=1487637013]
+custom_minimum_size = Vector2(0, 648)
+
+[node name="CenterContainer" type="CenterContainer" parent="." index="4" unique_id=1516904581]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -43,7 +60,6 @@ mouse_filter = 2
 
 [node name="EndMessagePanel" type="Panel" parent="CenterContainer" index="0" unique_id=213736646]
 unique_name_in_owner = true
-visible = false
 custom_minimum_size = Vector2(360, 120)
 layout_mode = 2
 

@@ -18,7 +18,12 @@ script = ExtResource("1")
 [node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1141822549]
 process_mode = 3
 autoplay = true
-bus = &"Music"
+
+[node name="BGColorRect" type="ColorRect" parent="." unique_id=2035930789]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 640.0
+color = Color(0, 0, 0, 1)
 
 [node name="BackgroundTextureRect" type="TextureRect" parent="." unique_id=1025367827]
 layout_mode = 1
@@ -54,10 +59,11 @@ anchor_right = 1.0
 offset_bottom = 67.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 48
-text = "Minimal Game Template"
+text = "JUMPING! Start"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("7_j7612")
+auto_update = false
 
 [node name="SubTitleMargin" type="MarginContainer" parent="MenuContainer" unique_id=893436372]
 layout_mode = 2
@@ -74,7 +80,7 @@ anchor_right = 1.0
 offset_bottom = 34.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 24
-text = "Subtitle"
+text = "❤️‍🩹"
 horizontal_alignment = 1
 vertical_alignment = 1
 
