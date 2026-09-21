@@ -291,7 +291,6 @@ graph_offset = Vector2(-180.277, 49)
 
 [node name="MainMenu" unique_id=2084566378 instance=ExtResource("1_f6vo5")]
 script = ExtResource("2_ojfib")
-game_scene_path = "uid://cbl3nkx5g8s7a"
 options_packed_scene = ExtResource("3_gtqgk")
 credits_packed_scene = ExtResource("4_wd3ic")
 
@@ -314,12 +313,6 @@ modulate = Color(1, 1, 1, 0)
 
 [node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0" unique_id=1691719897]
 lock = true
-
-[node name="NewGameButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0" unique_id=1434444510]
-text = "Play"
-
-[node name="CreditsButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="2" unique_id=1695433230]
-visible = false
 
 [node name="MouseFilter" type="Control" parent="." index="6" unique_id=26695112]
 layout_mode = 1

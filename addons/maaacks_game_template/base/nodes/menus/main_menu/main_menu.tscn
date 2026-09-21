@@ -14,6 +14,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1")
+game_scene_path = "uid://cbl3nkx5g8s7a"
 
 [node name="BackgroundMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1141822549]
 process_mode = 3
@@ -117,7 +118,7 @@ script = ExtResource("4_l1ebe")
 [node name="NewGameButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" unique_id=1434444510]
 unique_name_in_owner = true
 layout_mode = 2
-text = "New Game"
+text = "Play"
 
 [node name="OptionsButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" unique_id=1028226159]
 unique_name_in_owner = true
@@ -126,6 +127,7 @@ text = "Options"
 
 [node name="CreditsButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" unique_id=1695433230]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 text = "Credits"
 
